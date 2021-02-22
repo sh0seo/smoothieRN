@@ -1,15 +1,15 @@
-import React,{useState} from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components/native';
 import Button from '~/components/button';
 
-const Container = styled.SafeAreaView`
+const Container = styled.Pressable`
   flex: 1;
 `;
 
 const TitleContainer = styled.View`
   flex: 1;
-  justifiy-content: center;
-  align-itmes: center;
+  justify-content: center;
+  align-items: center;
 `;
 
 const TitleLabel = styled.Text`
@@ -24,13 +24,13 @@ const CountContainer = styled.View`
 
 const CountLabel = styled.Text`
   font-size: 24px;
-  font-wegith: bold;
+  font-weight: bold;
 `;
 
 const ButtonContainer = styled.View`
   flex: 1;
   flex-direction: row;
-  flew-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
 `;
 
@@ -41,7 +41,6 @@ interface Props {
 
 const Counter = ({title, initValue}: Props) => {
   const [count, setCount] = useState<number>(0);
-
   return (
     <Container>
       {title && (
@@ -49,6 +48,13 @@ const Counter = ({title, initValue}: Props) => {
           <TitleLabel>{title}</TitleLabel>
         </TitleContainer>
       )}
+      <CountContainer>
+        <CountLabel>{initValue + count}</CountLabel>
+      </CountContainer>
+      <ButtonContainer>
+        <Button iconName="plus" onPress={() => setCount(count + 1)} />
+        <Button iconName="minus" onPress={() => setCount(count - 1)} />
+      </ButtonContainer>
     </Container>
   );
 };
