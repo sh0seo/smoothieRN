@@ -4,8 +4,8 @@ import styled from 'styled-components/native';
 const Container = styled.SafeAreaView`
   position: absolute;
   bottom: 0;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-content: flex-end;
 `;
 const ButtonContainer = styled.Pressable`
   box-shadow: 4px 4px 8px #999;

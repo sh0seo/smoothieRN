@@ -43,7 +43,7 @@ const TodoListContextProvider = ({children}: Props) => {
   }, []);
 
   return (
-    <TodoListContextProvider
+    <TodoListContext.Provider
       value={{
         todoList,
         addTodoList,
@@ -51,7 +51,7 @@ const TodoListContextProvider = ({children}: Props) => {
       }}
     >
       {children}
-    </TodoListContextProvider>
+    </TodoListContext.Provider>
   );
 };
 

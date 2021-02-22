@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-const Container = styled.Pressable`
+const Container = styled.TouchableWithoutFeedback`
   position: absolute;
   top: 0;
   bottom: 0;

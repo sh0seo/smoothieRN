@@ -10,9 +10,7 @@ const AddTodo = ({}: Props) => {
   return (
     <>
       <AddButton onPress={() => setShowInput(true)} />
-      {
-        showInput && <TodoInput hideTodoInput={() => setShowInput(false)} />
-      }
+      {showInput && <TodoInput hideTodoInput={() => setShowInput(false)} />}
     </>
   );
 };

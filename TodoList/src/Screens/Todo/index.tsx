@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import AddTodo from './AddTodo/AddTodo';
+import AddTodo from './AddTodo';
 import TodoListView from './TodoListView';
 
 const Container = styled.View`

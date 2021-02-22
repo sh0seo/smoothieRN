@@ -24,7 +24,8 @@ const TextInput = ({hideTodoInput}: Props) => {
       autoCorrect={false}
       placeholder="iput work"
       returnKeyType="done"
-      onSubmitEditing={(nativeEvent) => {
+      onSubmitEditing={({nativeEvent}) => {
+        console.log(nativeEvent.text);
         addTodoList(nativeEvent.text);
         hideTodoInput();
       }}

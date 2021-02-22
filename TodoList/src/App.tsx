@@ -13,7 +13,7 @@ import { Text } from 'react-native';
 import styled from 'styled-components/native';
 import {TodoListContextProvider} from '~/context/TodoListContext';
 
-import Todo from '~/Screens/Todo/Todo';
+import Todo from '~/Screens/Todo';
 
 const Container = styled.View`
   flex: 1;
@@ -22,12 +22,11 @@ const Container = styled.View`
 
 const App = () => {
   return (
-    // <TodoListContextProvider>
+    <TodoListContextProvider>
       <Container>
-        {/* <Text>Hello</Text> */}
         <Todo />
       </Container>
-    // </TodoListContextProvider>
+    </TodoListContextProvider>
   );
 };
 
