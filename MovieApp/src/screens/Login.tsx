@@ -4,6 +4,8 @@ import styled from 'styled-components/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 import { UserContext } from '~/contexts/User';
+import Input from '~/components/Input';
+import Button from '~/components/Button';
 
 const Container = styled.SafeAreaView`
   flex: 1;
@@ -42,7 +44,7 @@ const Login = ({navigation}: Props) => {
         <Input 
           style={{marginBottom: 16}}
           placeholder="password"
-          secureTextentry={true}
+          secureTextEntry={true}
         />
         <Button 
           style={{marginBottom: 24}}

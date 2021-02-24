@@ -14,3 +14,7 @@ interface IUserContext {
 type LoginNaviParamList = {
   Login: undefined;
 }
+
+type MovieNaviParamList = {
+  Movie: undefined;
+}

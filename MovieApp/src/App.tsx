@@ -13,21 +13,22 @@ import {
   SafeAreaView,
   StatusBar,
 } from 'react-native';
+import styled from 'styled-components/native';
 import SplashScreen from 'react-native-splash-screen';
+import Navigator from './screens/Navigator';
+import { UserContextProvider } from './contexts/User';
 
 const App = () => {
-  useEffect(() => {
-    setTimeout(() => {
-      SplashScreen.hide();
-    }, 3000);
-  }, []); 
-
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     SplashScreen.hide();
+  //   }, 3000);
+  // }, []); 
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-      </SafeAreaView>
-    </>
+    <UserContextProvider>
+      <StatusBar barStyle="light-content" />
+      <Navigator />
+    </UserContextProvider>
   );
 };
 
