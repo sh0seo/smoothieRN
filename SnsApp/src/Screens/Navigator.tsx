@@ -6,7 +6,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import { UserContext } from '~/Context/User';
+import { UserContext } from '~/contexts/User';
 
 import Loading from '~/components/Loading';
 
@@ -27,7 +27,8 @@ const MyFeedTab = () => {
       <Stack.Screen 
         name="MyFeed" 
         component={MyFeed}
-        options={{titie: 'SNS App'}} />
+        options={{title: 'SNS App'}}
+      />
     </Stack.Navigator>
   );
 }

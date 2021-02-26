@@ -11,8 +11,8 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import Navigator from '~/screens/Navigator';
-import {UserContextProvider} from '~/Context/User';
-import {RandomUserDataProvider} from '~/Context/RandomUserData';
+import {UserContextProvider} from '~/contexts/User';
+import {RandomUserDataProvider} from '~/contexts/RandomUserData';
 
 interface Props {};
 

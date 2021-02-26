@@ -2,7 +2,7 @@ import React,{useEffect, useContext} from 'react';
 import styled from 'styled-components/native';
 import SplashScreen from 'react-native-splash-screen';
 import {StackNavigationProp} from '@react-navigation/stack';
-import { UserContext } from '~/Context/User';
+import { UserContext } from '~/contexts/User';
 
 import Input from '~/components/Input';
 import Button from '~/components/Button';

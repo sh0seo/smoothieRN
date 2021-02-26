@@ -27,7 +27,7 @@ const IconButton = ({iconName, style, onPress}: Props) => {
   const imageSource = {
     camera: require('~/assets/images/ic_camera.png'),
     live: require('~/assets/images/ic_live.png'),
-    send: require('~/assets/images/ic_send_png'),
+    send: require('~/assets/images/ic_send.png'),
     dotMenu: require('~/assets/images/ic_dot_menu.png'),
     favorite: require('~/assets/images/tabs/ic_favorite_outline.png'),
     comment: require('~/assets/images/ic_comment.png'),

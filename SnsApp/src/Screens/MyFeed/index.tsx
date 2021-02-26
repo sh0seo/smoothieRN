@@ -6,10 +6,10 @@ import {FlatList} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import styled from 'styled-components/native';
 import SplashScreen from 'react-native-splash-screen';
-import { RandomUserDataContext } from '~/Context/RandomUserData';
+import { RandomUserDataContext } from '~/contexts/RandomUserData';
 import IconButton from '~/components/IconButton';
 import Feed from '~/components/Feed';
-import StoryList from '~/screens/StoryList';
+import StoryList from '~/screens/MyFeed/StoryList';
 
 const HeaderRightContainer = styled.View`
   flex-direction: row;

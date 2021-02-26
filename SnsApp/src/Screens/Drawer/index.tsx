@@ -8,7 +8,7 @@ import {
   DrawerContentComponentProps,
   DrawerContentOptions,
 } from '@react-navigation/drawer';
-import {UserContext} from '~/Context/User';
+import {UserContext} from '~/contexts/User';
 
 const Header = styled.View`
   border-bottom-width: 1px;

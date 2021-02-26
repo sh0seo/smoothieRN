@@ -145,7 +145,7 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
         name: user.name,
         photo: user.photo,
         description: descriptionList[Math.floor(Math.random() * 24)],
-        image: getImage(),
+        images: getImage(),
       });
     }
     return feeds;
