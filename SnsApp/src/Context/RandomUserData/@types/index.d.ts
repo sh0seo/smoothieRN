@@ -4,6 +4,6 @@ interface IUserProfile {
 }
 
 interface IFeed extends IUserProfile {
-  image: Array<string>;
+  images: Array<string>;
   description: string;
 }

@@ -10,13 +10,37 @@ import Tab from '~/components/Tab';
 
 const Container = styled.SafeAreaView`
   flex: 1;
+  background-color: #feffff;
 `;
-const FormContainer = styled.View``;
-const Description = styled.Text``;
-const TabContainer = styled.View``;
-const Footer = styled.View``;
-const FooterDescription = styled.Text``;
-const GoBack = styled.Text``; 
+const FormContainer = styled.View`
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  padding: 32px;
+`;
+const Description = styled.Text`
+  text-align: center;
+  font-size: 12px;
+  color: #929292;
+  margin: 0px 8px;
+`;
+const TabContainer = styled.View`
+  flex-direction: row;
+  margin-bottom: 16px;
+`;
+const Footer = styled.View`
+  width: 100%;
+  border-top-width: 1px;
+  border-color: #d3d3d3;
+  padding: 8px;
+`;
+const FooterDescription = styled.Text`
+  color: #929292;
+  text-align: center;
+`;
+const GoBack = styled.Text`
+  color: #3796ef;
+`; 
 
 type NavigationProp = StackNavigationProp<LoginNaviParamList, 'Signup'>;
 

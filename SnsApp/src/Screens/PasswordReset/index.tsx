@@ -11,23 +11,57 @@ import Input from '~/components/Input';
 import Button from '~/components/Button';
 import Tab from '~/components/Tab';
 
-const Container = styled.SafeAreaView``;
-const FormContainer = styled.View``;
-const LockImageContainer = styled.View``;
+const Container = styled.SafeAreaView`
+  flex: 1;
+  background-color: #feffff;
+`;
+const FormContainer = styled.View`
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  padding: 32px;
+`;
+const LockImageContainer = styled.View`
+  padding: 24px;
+  border-width: 2px;
+  border-color: #292929;
+  border-radius: 80px;
+  margin-bottom: 24px;
+`;
 const LockImage = styled.Image``;
-const Title = styled.Text``;
-const Description = styled.Text``;
-const TabContainer = styled.View``;
-const HelpLabel = styled.View``;
-const Footer = styled.View``;
-const GoBack = styled.Text``;
+const Title = styled.Text`
+  font-size: 16px;
+  margin-bottom: 16px;
+`;
+const Description = styled.Text`
+  text-align: center;
+  margin-bottom: 16px;
+  color: #292929;
+`;
+const TabContainer = styled.View`
+  flex-direction: row;
+  margin-bottom: 16px;
+`;
+const HelpLabel = styled.Text`
+  color: #3796ef;
+`;
+const Footer = styled.View`
+  width: 100%;
+  border-top-width: 1px;
+  border-color: #d3d3d3;
+  padding: 8px;
+`;
+const GoBack = styled.Text`
+  color: #3796ef;
+  text-align: center;
+`;
 
 type NavigationProp = StackNavigationProp<LoginNaviParamList, 'PasswordReset'>;
 interface Props {
-  _navigation: NavigationProp;
+  navigation: NavigationProp;
 }
 
-const PasswordReset = ({_navigation}: Props) => {
+const PasswordReset = ({navigation}: Props) => {
   const [tabIndex, setTabIndex] = useState<number>(0);
   const tabs = ['User Name', 'Phone'];
   const tabDescriptions = [
@@ -62,7 +96,7 @@ const PasswordReset = ({_navigation}: Props) => {
         <HelpLabel>need to help?</HelpLabel>
       </FormContainer>
       <Footer>
-        <GoBack onPress={() => _navigation.goBack()}>Back Login</GoBack>
+        <GoBack onPress={() => navigation.goBack()}>Back Login</GoBack>
       </Footer>
     </Container>
   );

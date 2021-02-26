@@ -1,23 +1,56 @@
 import React,{ useContext } from 'react';
+import { Image } from 'react-native';
+
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
+
 import { UserContext } from '~/Context/User';
+
 import Loading from '~/components/Loading';
-import CustomDrawer from '~/screens/Drawer';
+
 import Login from '~/screens/Login';
 import Signup from '~/screens/Signup';
 import PasswordReset from '~/screens/PasswordReset';
+
+import CustomDrawer from '~/screens/Drawer';
+import MyFeed from '~/screens/MyFeed';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 const BottomTab = createBottomTabNavigator();
 
+const MyFeedTab = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="MyFeed" 
+        component={MyFeed}
+        options={{titie: 'SNS App'}} />
+    </Stack.Navigator>
+  );
+}
+
 const MainTabs = () => {
   return (
-    <BottomTab.Navigator>
-
+    <BottomTab.Navigator
+      tabBarOptions={{showLabel: false}}>
+      <BottomTab.Screen 
+        name="MyFeed" 
+        component={MyFeedTab}
+        options={{
+          tabBarIcon: ({color, focused}) => (
+            <Image
+              source={
+                focused
+                ? require('~/assets/images/tabs/ic_home.png')
+                : require('~/assets/images/tabs/ic_home_outline.png')
+              }
+            />
+          ), 
+        }}
+      />
     </BottomTab.Navigator> 
   );
 };
