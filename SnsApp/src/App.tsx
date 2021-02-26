@@ -8,24 +8,22 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
+import React from 'react';
 import { StatusBar } from 'react-native';
-import SplashScrren from 'react-native-splash-screen';
-import Navigator from '~/Screens/Navigator';
+import Navigator from '~/screens/Navigator';
+import {UserContextProvider} from '~/Context/User';
+import {RandomUserDataProvider} from '~/Context/RandomUserData';
 
 interface Props {};
 
 const App = ({}: Props) => {
-  useEffect(() => {
-    setTimeout(() => {
-      SplashScrren.hide();
-    }, 1000);
-  }, []);
   return (
-    <>
-      <StatusBar barStyle="default" />
-      <Navigator />
-    </>
+    <RandomUserDataProvider cache={true}>
+      <UserContextProvider>
+        <StatusBar barStyle="default" />
+        <Navigator />
+      </UserContextProvider>
+    </RandomUserDataProvider>
   );
 };
 
